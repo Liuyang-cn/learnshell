@@ -3,8 +3,8 @@
 testuser=badtest
 if grep $testuser /etc/passwd
 then
-    echo no badtest
+    ls -a /home/$testuser/.b*
 elif grep ly /etc/passwd
 then
-    ly exit
-
+    ls -a /home/ly/.b*
+fi
