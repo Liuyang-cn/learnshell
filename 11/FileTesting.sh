@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 #checking if the name exist as a directory
 if [ -d $HOME ]
 then
@@ -27,3 +27,21 @@ then
 else
     echo "Sorry,you do not have a ~ directory"
 fi 
+
+#test if it is a file
+if [ -e $HOME ]
+then
+    echo " $HOME exits,but is it a file? "
+    if [ -f $HOME ]
+    then 
+        echo " Yes,it is a file "
+    else
+        echo "It is not a file"
+        if [ -f $HOME/.bash_history ]
+        then
+           echo ".bash_history is a file"
+        fi
+    fi
+else
+    echo "$HOME does not exit"
+fi
